@@ -1,0 +1,31 @@
+ANANYA VERMA
+Machine Learning Engineer | ananya.verma@example.com | github.com/ananya-example
+
+SUMMARY
+Machine learning engineer with 2 years of experience building and deploying supervised learning models
+for tabular and text data. Comfortable across the ML lifecycle: data cleaning, feature engineering,
+model selection, evaluation and serving models behind REST APIs.
+
+EXPERIENCE
+ML Engineer, FinSight Analytics (Jan 2024 - Present)
+- Built a credit-default prediction model using gradient boosting (XGBoost) and logistic regression on
+  1.2M loan records; improved AUC from 0.74 to 0.81 through feature engineering and hyperparameter tuning.
+- Handled severe class imbalance with class weighting and threshold tuning; reported precision/recall.
+- Used k-fold cross-validation and a held-out test set; fixed a data leakage bug caused by target encoding.
+- Served models with FastAPI and Docker; tracked experiments with MLflow.
+
+Data Science Intern, RetailNest (Jun 2023 - Dec 2023)
+- Customer segmentation with k-means clustering and PCA for visualisation.
+- Built a random forest model to forecast weekly demand; analysed feature importance.
+
+PROJECTS
+- Sentiment Classifier: TF-IDF + naive Bayes baseline, then fine-tuned a small transformer (Hugging Face); compared results.
+- Digit Recognition from Scratch: implemented a 2-layer neural network with backpropagation and gradient descent in NumPy.
+
+SKILLS
+Python, SQL, scikit-learn, XGBoost, PyTorch, Pandas, NumPy, FastAPI, Docker, MLflow, Git
+Concepts: supervised learning, decision trees, ensembles, regularization, bias-variance trade-off, cross-validation,
+clustering, PCA, neural networks, backpropagation, naive Bayes
+
+EDUCATION
+B.Tech in Computer Science, 2023

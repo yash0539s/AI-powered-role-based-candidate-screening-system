@@ -1,0 +1,29 @@
+# One-command local deployment.
+#   1. cp backend/.env.example backend/.env   (set GROQ_API_KEY)
+#   2. docker compose run --rm backend python -m scripts.download_books
+#      docker compose run --rm backend python -m scripts.ingest
+#   3. docker compose up --build    ->  http://localhost:3000
+services:
+  backend:
+    build: ./backend
+    env_file: ./backend/.env
+    environment:
+      CORS_ORIGINS: http://localhost:3000,http://127.0.0.1:3000
+    volumes:
+      - ./backend/data:/app/data   # books, Chroma index, SQLite DB, embedding cache
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        # Baked into the client bundle: the URL the *browser* uses to reach the API.
+        NEXT_PUBLIC_API_URL: http://localhost:8000
+    ports:
+      - "3000:3000"
+    depends_on:
+      backend:
+        condition: service_healthy
+    restart: unless-stopped
