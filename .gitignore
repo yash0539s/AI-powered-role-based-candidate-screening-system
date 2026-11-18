@@ -31,3 +31,6 @@ frontend/.next/
 Thumbs.db
 .vscode/
 .idea/
+
+# Personal demo-recording notes (kept locally, not published)
+DEMO_SCRIPT.md
